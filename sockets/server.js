@@ -1,21 +1,16 @@
 
 // Server with Express
-const express = require('express');
+const express = require("app");
+const { createServer } = require("http");
+const { Server } = require("socket.io");
+
 const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer, { /* options */ });
 
-const http = require('http');
-
-const server = http.createServer(app);
-
-server.listen(8081);
-
-// Listen connections with socketIO:
-const {socketIo} = require("socket.io");
-const io = new socketIo();
-
-// Listen the event "connect" and run the function
-io.on('connect', function(socket){
+io.on("connection", (socket) => {
+    // ...
     console.log('new connection id:'+ socket.id);
 });
 
-io.listen(8080);
+httpServer.listen(8080);
