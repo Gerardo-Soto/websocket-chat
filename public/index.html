@@ -13,6 +13,12 @@
      <script>
          //const socket = io.connect('http://dominio');
          const socket = io.connect();
+         // Send info of user in current connection:
+         socket.emit('userdata', {email: 'email@gmail.com', user: 'Gerard'});
+
+         socket.on('newUser', function(userdata){
+             alert("Hi new user:"+ userdata.user+" I am the server.");
+         })
      </script>
 </body>
 </html>
