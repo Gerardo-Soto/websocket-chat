@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Implementar un sistema Websockets en NodeJs utilizando la libreria socket.Io, al final del curso estaremos elaborando un chat grupal en vivo utilizando las funcionalidades de socket.Io, y posteriormente estaremos elaborando varios sistemas de control de usuarios conectados, para crear chats privados, o sea entre usuarios en específico.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerardo-Soto/websocket-chat.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "socket"
+  ],
+  "author": "Gerardo Alberto Soto Alvarez del Castillo <gerardo.8.soto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gerardo-Soto/websocket-chat/issues"
+  },
+  "homepage": "https://github.com/Gerardo-Soto/websocket-chat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  }
+}
