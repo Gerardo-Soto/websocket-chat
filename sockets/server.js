@@ -14,6 +14,6 @@ const socketIo = require('socketIo');
 const io = socketIo.listen(server);
 
 // Listen the event "connect" and run the function
-io.listen('connect', function(socket){
+io.on('connect', function(socket){
     console.log('new connection id:'+ socket.id);
 });
