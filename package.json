@@ -4,7 +4,8 @@
   "description": "Implementar un sistema Websockets en NodeJs utilizando la libreria socket.Io, al final del curso estaremos elaborando un chat grupal en vivo utilizando las funcionalidades de socket.Io, y posteriormente estaremos elaborando varios sistemas de control de usuarios conectados, para crear chats privados, o sea entre usuarios en específico.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node sockets/server.js"
   },
   "repository": {
     "type": "git",
