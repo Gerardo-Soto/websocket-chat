@@ -20,6 +20,6 @@ function login(){
 
 function sendMessage(){
     message = $('#message').val();
-    user = $('#form #user').val();
+    user = $('#form #username').val();
     socket.emit('send_message', {message: message, user: user});
 }
