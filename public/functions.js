@@ -12,7 +12,7 @@ socket.on('newMessage', function(userdata){
 
 function login(){
     email = $('#form #email').val();
-    user = $('#form #user').val();
+    user = $('#form #username').val();
     // Send info of user in current connection:
     socket.emit('userdata', {email: email, user: user});
     alert('login '+ email +' '+ user);
