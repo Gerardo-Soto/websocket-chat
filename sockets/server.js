@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
     socket.on('send_message', function(data){
         console.log('[Server] New message, User: '+ data.user +' sended this message: '+ data.message);
         // Send a emit to all users connected:
-        io.emit('newMessage', {user: data.user, message: message});
+        io.emit('newMessage', {user: data.user, message: data.message});
     });
 });
 
