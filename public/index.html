@@ -8,23 +8,21 @@
 </head>
 <body>
     <h2>Socket.io</h2>
-    <form action="">
+    <form action="" id="form">
         <input type="text" name="email" id="email" placeholder="email" value="">
         <input type="text" name="username" id="username" placeholder="username" value="">
         <input type="button" value="Go" onclick="login()">
     </form>
+    <div id="messagesBox">
+        
+    </div>
+    <div>
+        <textarea name="message" id="message" cols="30" rows="30"></textarea>
+        <button id="send-message" onclick="sendMessage()">Send</button>
+    </div>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
      <script src="socket.io.js"></script>
-     <script>
-         //const socket = io.connect('http://dominio');
-         const socket = io.connect();
-         // Send info of user in current connection:
-         socket.emit('userdata', {email: 'email@gmail.com', user: 'Gerard'});
-
-         socket.on('newUser', function(userdata){
-             alert("Hi new user:"+ userdata.user+" I am the server.");
-         })
-     </script>
      <script src="functions.js"></script>
+     
 </body>
 </html>

@@ -24,12 +24,17 @@ io.on("connection", (socket) => {
 
     // Server response
     socket.on('userdata', function(data){
-        console.log('email: '+ data.email +' user: '+ data.user);
+        console.log('[Server] New user connected, hi, I am: email: '+ data.email +' user: '+ data.user);
         // Send a emit to all users connected:
-        io.emit('[Server] New user connected, hi, I am: '+ data.user, {user: data.user});
+        io.emit('newUser', {user: data.user});
     });
 
-
+    // Send message
+    socket.on('send_message', function(data){
+        console.log('[Server] New message, User: '+ data.user +' sended this message: '+ data.message);
+        // Send a emit to all users connected:
+        io.emit('newMessage', {user: data.user, message: message});
+    });
 });
 
 httpServer.listen(8080);
