@@ -21,5 +21,6 @@ function login(){
 function sendMessage(){
     message = $('#message').val();
     user = $('#form #username').val();
+    document.getElementById("message").value = "";
     socket.emit('send_message', {message: message, user: user});
 }
